@@ -16,5 +16,27 @@ public class Animal {
 	{
 		return height+"";
 	}
+	
+	public boolean act()
+	{
+		boolean b = true;
+		
+		for(int i = 0; i < Runner.trees.size()&&b; i++)
+		{
+			if(Runner.trees.get(i).getHeight() < height)
+			{
+				Runner.trees.remove(i);
+				b = false;
+			}
+		}
+		
+		if(!b)
+		{
+			Runner.newAnimals.add(new Animal(height,modifier));
+		}
+		
+		return b;
+	}
+	
 
 }

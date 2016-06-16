@@ -15,4 +15,14 @@ public class Tree {
 	{
 		return height+"";
 	}
+	
+	public int getHeight()
+	{
+		return height;
+	}
+	
+	public void act()
+	{
+		Runner.newTrees.add(new Tree(height,modifier));
+	}
 }

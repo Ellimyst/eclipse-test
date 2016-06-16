@@ -10,6 +10,8 @@ public class Runner {
 		ArrayList<Tree> trees = new ArrayList<Tree>();
 		ArrayList<Animal> animals = new ArrayList<Animal>();
 		
+		Time time = new Time(trees, animals);
+		
 		for(int i = 0; i < 10; i++)
 		{
 			trees.add(new Tree(10,4));
